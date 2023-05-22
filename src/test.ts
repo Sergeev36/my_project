@@ -1,3 +1,3 @@
-export function someFn (): any {
-  console.log('RANDOM')
+export function someFn(): any {
+    console.log('RANDOM');
 }

@@ -1,6 +1,6 @@
-import {classNames} from "shared/libs/classNames/classNames";
-import styles from './Button.module.scss'
-import {ButtonHTMLAttributes, FC} from "react";
+import { classNames } from 'shared/libs/classNames/classNames';
+import { ButtonHTMLAttributes, FC } from 'react';
+import styles from './Button.module.scss';
 
 export enum ThemeButton {
   CLEAR = 'clear'
@@ -11,13 +11,14 @@ export interface ButtonProp extends ButtonHTMLAttributes<HTMLButtonElement> {
   theme?: ThemeButton;
 }
 
-export const Button:FC<ButtonProp> = ({ theme, className, children, ...otherProps}) => {
-  return (
+export const Button:FC<ButtonProp> = ({
+    theme, className, children, ...otherProps
+}) => (
     <button
-      className={classNames(styles.Button, {}, [className, styles[theme]])}
-      {...otherProps}
+        type="button"
+        className={classNames(styles.Button, {}, [className, styles[theme]])}
+        {...otherProps}
     >
-      {children}
+        {children}
     </button>
-  );
-};
+);
