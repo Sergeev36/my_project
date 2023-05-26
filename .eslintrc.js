@@ -10,8 +10,6 @@ module.exports = {
         'airbnb',
     ],
     parser: '@typescript-eslint/parser',
-    overrides: [
-    ],
     parserOptions: {
         ecmaFeatures: {
             jsx: true,
@@ -41,6 +39,7 @@ module.exports = {
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
+        'no-restricted-globals': 'off',
         'i18next/no-literal-string':
           ['error', { markupOnly: true, onlyAttribute: [''] }],
         'max-len': ['error', { ignoreComments: true, code: 120 }],
@@ -49,4 +48,12 @@ module.exports = {
         React: true,
         __IS_DEV__: true,
     },
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+    ],
 };
