@@ -6,7 +6,9 @@
   "Короткий язык": "Eng",
   "increment": "increment",
   "decrement": "decrement",
-  "Войти": "Войти",
-  "Введите имя": "Введите имя",
-  "Введите пароль": "Введите пароль"
+  "Войти": "Login",
+  "Введите имя": "Enter username",
+  "Введите пароль": "Enter password",
+  "Форма авторизации": "Auth form",
+  "Вы ввели неверный логин или пароль": "You entered an incorrect username or password"
 }
