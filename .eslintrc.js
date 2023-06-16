@@ -45,10 +45,11 @@ module.exports = {
           ['error', { markupOnly: true, onlyAttribute: [''] }],
         'max-len': ['error', { ignoreComments: true, code: 120 }],
         'react-hooks/rules-of-hooks': 'error',
-        'react-hooks/exhaustive-deps': 'error',
+        'react-hooks/exhaustive-deps': 'warn',
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
         'no-param-reassign': 'off',
+        'react/jsx-no-useless-fragment': 'off',
     },
     globals: {
         React: true,
