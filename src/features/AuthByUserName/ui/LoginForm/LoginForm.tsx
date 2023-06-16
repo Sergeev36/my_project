@@ -8,10 +8,10 @@ import { loginByUsername } from 'features/AuthByUserName/model/services/loginByU
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { DynamicModuleLoader, ReducersList } from 'shared/libs/DynamicModuleLoader/DynamicModuleLoader';
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
-import { getLoginUsername } from '../../model/selectors/getLoginUsername';
-import { getLoginPassword } from '../../model/selectors/getLoginPassword';
-import { getLoginLoading } from '../../model/selectors/getLoginLoading';
-import { getLoginError } from '../../model/selectors/getLoginError';
+import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
+import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
+import { getLoginLoading } from '../../model/selectors/getLoginLoading/getLoginLoading';
+import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
 import styles from './LoginForm.module.scss';
 
 export interface LoginFormProps {
