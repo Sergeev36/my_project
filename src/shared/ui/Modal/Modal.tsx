@@ -1,4 +1,4 @@
-import { classNames } from 'shared/libs/classNames/classNames';
+import { classNames, Mods } from 'shared/libs/classNames/classNames';
 import React, {
     ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react';
@@ -25,7 +25,7 @@ export const Modal = ({
 }: ModalProps) => {
     const [isClosing, setIsClosing] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
-    const timerRef = useRef<ReturnType<typeof setTimeout>>();
+    const timerRef = useRef<ReturnType<typeof setTimeout> | undefined>();
     const { theme } = useTheme();
 
     useEffect(() => {
@@ -49,9 +49,9 @@ export const Modal = ({
 
     const onKeyDown = useCallback((e: KeyboardEvent) => {
         if (e.key === 'Escape') {
-            onClose();
+            closeHandler();
         }
-    }, [onClose]);
+    }, [closeHandler]);
 
     useEffect(() => {
         if (isOpen) {
@@ -68,7 +68,7 @@ export const Modal = ({
         e.stopPropagation();
     };
 
-    const mods: Record<string, boolean> = {
+    const mods: Mods = {
         [styles.opened]: isOpen,
         [styles.isClosing]: isClosing,
     };

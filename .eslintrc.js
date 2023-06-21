@@ -50,10 +50,12 @@ module.exports = {
         'jsx-a11y/click-events-have-key-events': 'off',
         'no-param-reassign': 'off',
         'react/jsx-no-useless-fragment': 'off',
+        'no-undef': 'off',
     },
     globals: {
         React: true,
         __IS_DEV__: true,
+        __API__: true,
     },
     overrides: [
         {
