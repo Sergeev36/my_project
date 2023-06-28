@@ -5,7 +5,7 @@ import { memo } from 'react';
 
 export interface LangSwitcherProps {
   className?: string
-    short?: boolean
+  short?: boolean
 }
 
 export const LangSwitcher = memo(({ className, short }: LangSwitcherProps) => {
